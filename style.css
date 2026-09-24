@@ -1,0 +1,179 @@
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cores do Tema Escuro (Formal e Moderno) */
+:root {
+    --cor-fundo: #121212;
+    --cor-superficie: #1e1e1e;
+    --cor-texto: #e0e0e0;
+    --cor-texto-secundario: #a0a0a0;
+    --cor-destaque: #3b82f6; /* Azul moderno/tecnológico */
+    --cor-destaque-hover: #2563eb;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Cabeçalho e Menu de Navegação */
+header {
+    background-color: var(--cor-superficie);
+    padding: 1rem 0;
+    position: sticky; /* Mantém o menu no topo ao rolar a página */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a:focus {
+    color: var(--cor-destaque);
+    outline: 2px solid var(--cor-destaque);
+    border-radius: 4px;
+}
+
+/* Estrutura Principal */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+h2 {
+    border-bottom: 2px solid var(--cor-destaque);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+}
+
+/* Seção Início (Apresentação) */
+#apresentacao {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+#apresentacao img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--cor-destaque);
+    margin-bottom: 1.5rem;
+}
+
+/* Cartões de Projeto */
+.cartao-projeto {
+    background-color: var(--cor-superficie);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.cartao-projeto:hover {
+    transform: translateY(-5px); /* Dá um efeito de flutuar ao passar o mouse */
+}
+
+.cartao-projeto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border: 1px solid #333;
+}
+
+/* Botões */
+.botao {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.botao:hover, .botao:focus {
+    background-color: var(--cor-destaque-hover);
+    outline: 2px solid #ffffff;
+}
+
+/* Links de Contato */
+#contato a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--cor-superficie);
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+}
+
+/* Responsividade (Adaptação para Celulares) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    #apresentacao h1 {
+        font-size: 1.8rem;
+    }
+}
